@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UFT-8">
+ <title>Giới trẻ KANTO</title>
+ <link rel="icon" href="https://scontent.fkix2-2.fna.fbcdn.net/v/t31.0-8/17620553_1291810520948607_4746030720460756618_o.jpg?_nc_cat=100&ccb=2&_nc_sid=09cbfe&_nc_ohc=ZGx6kNtSmCAAX90MgA4&_nc_ht=scontent.fkix2-2.fna&oh=27b73fc91077a23be7e04e50fe9ee74e&oe=601F7387" type="image/x-icon"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="./assets/css/style.css">
+ <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+ <style>
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family:Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+/* class chung*/
+.clear{ 
+    clear: both;
+}
+.text-white{
+    color: #fff !important ;
+}
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+
+}
+.row::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-ba{
+    width: 33.333%;
+}
+.col-hai{
+    width: 50%
+    ;
+}
+.col-full{
+    width: 100%;
+}
+.text-center{
+    text-align: center!important;
+}
+.mt-8{
+    margin-top: 8px !important;
+}
+.mt-16{
+    margin-top:16px !important;
+}
+
+
+
+
+/*main*/
+#head{
+    height: 46px;
+    background-color: black;
+    position: fixed;
+    top:0;
+    left:0 ;
+    right: 0;
+    z-index: 1;
+
+}
+#nav {
+    display:inline-block;
+}
+#nav,.subnav{
+    list-style-type: none;
+} 
+#nav> li{
+    display:inline-block;
+
+}
+#nav li{
+    position: relative;
+}
+#nav> li> a{color:#fff;
+    text-transform: uppercase;}
+#nav li a{
+    
+    text-decoration: none;
+    line-height:46px ;
+    padding: 0 24px 0;
+    display:inline-block;
+    
+}
+#nav li:hover .subnav{
+    display: block;
+}
+
+
+
+#nav> li:hover> a,
+#nav .subnav li:hover a{
+    color: #000;
+    background-color:#ccc
+     ;
+}
+
+#nav .subnav {
+    display: none;
+   min-width: 160px ;
+    position:absolute;
+    top:100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow:0 0 10px rgba(0,0,0,0.3) ;
+}
+#nav .subnav a{
+    color:#000;
+    padding: 0 16px ;
+    line-height: 38px ;
+}
+#nav .fas{
+    font-size: 20px;
+}
+#nav .subnav li:hover {color: #000;
+    background-color:#ccc
+     ;
+
+}
+#head .search:hover{
+    background-color: #f44336
+
+}
+#head .search{
+    float:right;
+    padding: 0 21px ;
+    cursor:pointer;
+}
+
+#head .fa{
+    color:#fff;
+    font-size: 20px;
+    line-height: 46px;
+
+}
+
+#slider{
+    position: relative;
+    margin-top:46px ;
+    padding-top: 50%;
+    background: url('https://scontent-nrt1-1.xx.fbcdn.net/v/t1.0-9/134956018_3776176685845299_6229234639807850178_o.jpg?_nc_cat=106&ccb=2&_nc_sid=730e14&_nc_ohc=_73MMX_uw8sAX_s_uou&_nc_ht=scontent-nrt1-1.xx&oh=0c46a7f3d78e4f09dbf93ca2d44f929c&oe=601F4234') top center / cover no-repeat;
+    z-index: 100px;
+
+
+}
+#slider .text-content{
+ position: absolute;
+ color: #fff;
+ bottom: 45px;
+ width: 100%;
+ text-align: center;
+ 
+}
+#slider .text-heading{
+    font-weight: 500;
+    font-size: 24px;
+
+}
+#slider .text-vi{
+    font-size: 15px;
+
+}
+
+
+
+#content .content-section{
+    width: 800px;
+    padding: 64px 0;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+#content .section-heading{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 4px;
+
+}
+#content .section-sub{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 15px;
+    font-style: italic;
+    opacity: 0.6;
+
+}
+#content .van{
+    margin-top: 15px;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.66;
+
+
+}
+#content .member-list{
+    margin-top: 48px;
+
+}
+
+#content .tên {
+    font-size: 15px;
+    text-align: center
+    ;}
+#content .member-img{
+    width: 150px;
+    margin-top: 15px;
+    border-radius: 6px;
+}
+/*css tuar*/
+.tour-sections{
+    background-color: black;
+    padding-bottom: 16px;
+}
+.tickets {
+    background-color: #fff;
+    margin-top: 40px;
+    list-style: none;
+}
+.tickets li{
+    color: #757575 ;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+.tickets .sold-out{
+    background-color: #f44336;
+    color:#fff;
+    padding: 3px 4px ;
+    margin-left: 16px ;
+
+}
+.tickets .so-luong{
+    float:right;
+    width: 24px;
+    height:24px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px;
+
+
+}
+/* palace*/
+.places-list{
+    margin-top: 32px;
+    padding-bottom: 48px;
+}
+
+.palace-img:hover{
+    opacity: 0.6;
+}
+.palace-img{
+    width: 100%;
+    display:block;
+
+}
+.palace-body{
+    background-color: #fff;
+    padding: 16px;
+    font-size: 15px;
+}
+.palace-heading{
+    font-size: 15px;
+    font-weight: 500
+;
+}
+.palace-time{
+    margin-top: 15px;
+    color: #777777;
+}
+.palace-dsc{
+    margin-top: 15px;
+    line-height: 1.4
+    ;
+}
+.palace-buy-btn:hover{
+    color: black;
+    background-color: #ccc;
+}
+.palace-buy-btn{
+    color: #fff;
+    background-color:#000;
+    text-decoration: none;
+    padding: 11px 16px ;
+    display: inline-block;
+    margin-top: 15px
+;/*contac*/
+}
+.contact-content{
+    margin-top: 48px;
+}
+.contact-info {
+    font-size:18px;
+    line-height: 1.4
+    ;
+}
+.contact-info i{
+    width: 30px;
+    display: inline-block;
+    }
+.contact-v{
+    font-size: 15px;
+}
+.contact-v .form-control{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+
+}
+.contact-v .form-submit-btn{
+
+    background-color: black;
+    color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px 16px ;
+    float:right;
+    outline: none;
+    cursor: pointer;
+
+}
+.contact-v .form-submit-btn:hover{
+    color:#000;
+    background-color: #ccc;
+}
+.map-section img {
+    width: 100%;
+
+}
+#fooder{line-height: 40px;
+    padding: 64px 16px ;
+    text-align: center;
+
+
+}
+.socials a{
+    font-size: 50px;
+    color: rgba(0,0,0,0.6);
+
+}
+.socials a:hover{
+    background-color:#ccc;
+    color: #000;
+   
+}
+.copyright{
+    font-size: 16px;
+}
+ </style>
+
+</head>
+<body style="font-size:24px;">
+ <div id="main">
+      <div id="head">
+      <!-- bắt đầu nav -->
+          <ul id="nav">
+            <li><a href="#">TRANG CHỦ</a></li>
+            <li><a href="#band">LỜI CHÚA</a></li>
+            <li><a href="#tuar">NHÀ THỜ</a></li>
+            <li><a href="#contact">LIÊN HỆ</a></li>
+            <li>
+             <a href="">
+              More
+              <i class="fas fa-angle-down"></i>
+             </a>
+             <ul class="subnav">
+               <li><a href="https://www.nessei.com/">ĐĂNG KÍ THÁNH LỄ</a></li>
+               <li><a href="https://www.nessei.com/loconline">RÚT LỘC ĐẦU NĂM</a></li>
+               <li><a href="https://www.nessei.com/masstime">GIỜ LỄ TẠI NHẬT</a></li>
+              
+             </ul>
+            </li>
+          </ul>
+          <!-- kết thúc nav -->
+          <!-- bắt đầu  nút tìm kiếm -->
+         <div class="search">
+           <i class="fa fa-search"></i>
+         </div>
+          <!-- kết  nút tìm kiếm -->
+       </div>
+       <div id="slider">
+         <div class="text-content">
+           <div class="text-heading">TOKYO</div>
+           <div class="text-vi">カトリック麹町 聖イグナチオ教会</div>
+         
+         </div>
+       <!--thban bắt dầu-->
+       </div>
+       <div id="content">
+        <div id="band" class="content-section">
+            <h2 class="section-heading">LỜI CHÚA HÔM NAY</h2>
+            <p class="section-sub">Ga 3, 22-30</p>
+            <p class="van">Khi ấy, Chúa Giêsu cùng các môn đệ Người đến đất Giuđêa. Người ở lại đó với họ và làm phép rửa. Cũng có Gioan làm phép rửa tại Ainon, gần Salim, vì ở đó có nhiều nước, và người ta đến để chịu rửa.
+
+Vì chưng, khi ấy Gioan chưa bị tống ngục. Xảy ra có cuộc tranh luận giữa các môn đệ của Gioan và người Do Thái về việc thanh tẩy. Họ đến cùng Gioan và nói với ông: "Thưa Thầy, người đã ở với Thầy bên kia sông Giođan, mà Thầy đã làm chứng cho, nay cũng làm phép rửa và ai nấy đều đến cùng người!"
+
+Gioan trả lời rằng: "Người ta không tiếp nhận gì mà không phải bởi trời ban cho. Chính các ngươi đã làm chứng cho tôi là tôi đã nói: Tôi không phải Đấng Kitô, nhưng tôi được sai đến trước Người.
+
+Ai cưới vợ, thì là người chồng, còn bạn hữu của tân lang đứng mà nghe tân lang nói thì vui mừng ví tiếng nói của tân lang. Vậy niềm vui của tôi như thế là đầy đủ. Người phải lớn lên, còn tôi phải nhỏ lại".</p>
+            <div class="row member-list">
+              <div class="col col-ba text-center">
+               <p class="tên">Cha đặc trách giới trẻ</p>
+               <img src="https://scontent-nrt1-1.xx.fbcdn.net/v/t1.0-9/117299870_3432736066750725_6267379675316624794_o.jpg?_nc_cat=103&ccb=2&_nc_sid=174925&_nc_ohc=nv4DDd_G_BUAX-uBjuD&_nc_ht=scontent-nrt1-1.xx&oh=fc7f766996f52ad307e967b2f14f506e&oe=601EA142" alt="name" class="member-img">
+              </div>
+              <div class="col col-ba text-center">
+                <p class="tên">Cha đặc trách Cộng Đoàn</p>
+               <img src="https://scontent-nrt1-1.xx.fbcdn.net/v/t31.0-8/14715639_315825442116955_6520691374865106054_o.jpg?_nc_cat=102&ccb=2&_nc_sid=09cbfe&_nc_ohc=okwbRT6Mi2wAX8evdDa&_nc_oc=AQlNOoaALUWtrkEfSni8X9rmhLTvROirMD8zWybvSOeb9M1WIb8lPs0a6xYXrN0dydw&_nc_ht=scontent-nrt1-1.xx&oh=d609fe31948a814202ed93290befef24&oe=601ED337" alt="name" class="member-img">
+              </div>
+              <div class="col col-ba text-center">
+               <p class="tên">Trưởng Giới Trẻ</p>
+               <img src="https://scontent-nrt1-1.xx.fbcdn.net/v/t1.0-9/136150999_3590614604361743_2721047199825682019_o.jpg?_nc_cat=102&ccb=2&_nc_sid=09cbfe&_nc_ohc=hduBFRJ56QAAX-hAeju&_nc_ht=scontent-nrt1-1.xx&oh=58c1f6102b49a381794f3d9843d3dece&oe=601FBDDE" alt="name" class="member-img">
+              </div>
+              <div class="clear"></div>
+              </div> 
+        </div>
+        <!-- hết the ban-->
+        <!--tour  bắt dầu-->
+        <div id="tuar" class="tour-sections">
+         
+         <div class="content-section">
+            <h2 class="section-heading text-white">NHÀ THỜ</h2>
+            <p class="section-sub text-white">Có Thánh Lễ Tiếng Việt</p>
+            <!-- vé -->
+            <!--<ul class="tickets">
+             <li>September <span class="sold-out">sold out</span></li>
+             <li>October <span class="sold-out">sold out</span></li>
+             <li>november<span class="so-luong">3</span></li>
+            </ul>-->
+            <!-- điểm  -->
+            <div class="row places-list">
+             <div class="col col-ba">
+                <img src="https://scontent-nrt1-1.xx.fbcdn.net/v/t1.0-9/137516571_1060691664445811_1713271621568554956_n.jpg?_nc_cat=111&ccb=2&_nc_sid=e3f864&_nc_ohc=r_L-0P69hkAAX9pA8u4&_nc_ht=scontent-nrt1-1.xx&oh=0272fd289b34bc75c668f4c838201f05&oe=60205C65" alt="New York" class="palace-img">
+                <div class="palace-body">
+                   <h3 class="palace-heading">麹町 聖イグナチオ教会 </h3>
+                   <p class="palace-time">#</p>
+                   <p class="palace-dsc">〒102-0083 東京都千代田区麹町６丁目５−１</p>
+                   <!--<a href="#" class="palace-buy-btn"> BUY TICKETS</a>-->
+                </div>
+             </div>
+             <div class="col col-ba">
+                <img src="http://saitama-kyoku.net/our_parishes/church-db/_img/1349922571.jpg" alt="Paris" class="palace-img">
+                <div class="palace-body">
+                   <h3 class="palace-heading">川口教会 </h3>
+                   <p class="palace-time">#</p>
+                   <p class="palace-dsc">〒332-0012　埼玉県川口市本町2-4-15</p>
+                   <!--<a href="#" class="palace-buy-btn"> BUY TICKETS</a>-->
+                </div>
+             </div>
+             <div class="col col-ba">
+                <img src="https://tokyo.catholic.jp/wp-content/themes/catholic-tokyo/img/diocese/church/asakusa2.jpg" alt="San Francisco" class="palace-img">
+                <div class="palace-body">
+                   <h3 class="palace-heading">カトリック浅草教会 </h3>
+                   <p class="palace-time">#</p>
+                   <p class="palace-dsc">〒111-0053　東京都台東区浅草橋5-20-5 </p>
+                   <!--<a href="#" class="palace-buy-btn"> BUY TICKETS</a>-->
+                </div>
+             </div>
+            </div>
+            <div class="clear"></div>
+
+         </div>
+        </div>
+         <!-- hết tour -->
+        <!--contaccontac bắt dầu-->
+        <div id="contact" class="content-section">
+            <h2 class="section-heading">LIÊN HỆ</h2>
+            <p class="section-sub">Xin để lại tên,địa chỉ email và thông tin lời nhắn</p>
+            <div class="row contact-content">
+              <div class="col col-hai contact-info ">
+              <p><i class="fas fa-map-marker-alt"></i>TOKYO</p>
+              <p><i class="fas fa-phone"></i>Phone: +00 151515</p>
+              <p><i class="fas fa-envelope-square"></i>Email:gioitreconggiaokanto@gmail.com</p>
+              
+              </div>
+              <div class="col col-hai contact-v ">
+                <form action="">
+                   <div class="row">
+                     <div class="col col-hai ">
+                       <input type="text" name="" placeholder="name" required id="" class="form-control">
+
+                     </div >
+                     <div class="col col-hai ">
+                       <input type="email" name="" placeholder="email" required id="" class="form-control">
+                       
+                     </div >
+                     
+                   </div>
+                   <div class="row mt-8">
+                     <div class="col col-full">
+                      <input type="text" name="" placeholder="message" id="" class="form-control">  
+                     </div >
+                   </div>
+                   <input class="form-submit-btn mt-16" type="submit" value="SEND">
+                </form>
+              </div>
+            </div>
+        </div>
+        <div class="map-section">
+         <img src="https://scontent.fkix2-2.fna.fbcdn.net/v/t1.0-9/133313014_3771445499651751_1926265024296681983_o.jpg?_nc_cat=100&ccb=2&_nc_sid=730e14&_nc_ohc=QZgg34bCKwcAX_JPtIC&_nc_ht=scontent.fkix2-2.fna&oh=56c50731bdddc6c22de09da7c93bc12b&oe=6020CC39" slt="map">
+        </div>
+         <!-- hết contacs-->
+       </div>
+       <div id="fooder">
+         <p class="copyright">LIÊN HỆ</p>
+        <div class="socials">
+         <a href="https://www.facebook.com/Gi%E1%BB%9Bi-Tr%E1%BA%BB-C%C3%B4ng-Gi%C3%A1o-Vi%E1%BB%87t-Nam-V%C3%B9ng-Kanto-1291810040948655"><i class="fab fa-facebook"></i></a>
+         <a href="https://www.facebook.com/groups/gioitreconggiaokanto"><i class="fab fa-facebook"></i></a>
+        </div>
+        <p class="copyright">Trang web GIÁO ĐOÀN CÔNG GIÁO <a href="http://vietcatholicjp.net/">http://vietcatholicjp.net/</a></p>
+       </div>
+
+ 
+     </div>
+
+
+
+</body>
+</html>
